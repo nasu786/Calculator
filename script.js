@@ -1,9 +1,47 @@
 let out = document.getElementById("output-screen");
+let c ;
 
-
+// for mouse click
 function display(num){
-    out.value += num;
+
+    c = out.value["length"];
+    function operatorsMouse(){
+        if (out.value[c-1] === "+"){
+            out.value = out.value.slice(0,-1);
+            out.value += num;
+        }else if (out.value[c-1] === "-"){
+            out.value = out.value.slice(0,-1);
+            out.value += num;
+        }else if (out.value[c-1] === "*"){
+            out.value = out.value.slice(0,-1);
+            out.value += num;
+        }else if (out.value[c-1] === "/"){
+            out.value = out.value.slice(0,-1);
+            out.value += num;
+        }else{
+            out.value += num;
+        }
+    }
+
+    switch(num){
+        case '+' :
+            operatorsMouse();
+            break;
+        case '-' :
+            operatorsMouse();
+            break;
+        case '*' :
+            operatorsMouse();
+            break;
+        case '/' :
+            operatorsMouse();
+            break;
+        default :
+            out.value += num;
+    }
+    
 }
+
 function Calculate(){
     try{
         out.value = eval(out.value);
@@ -18,7 +56,36 @@ function Clear(){
 function del(){
     out.value = out.value.slice(0, -1);
 }     
+
+out.addEventListener('keydown', function(){
+    out.value = out.value.slice(0, -1);
+    console.log(out.value)
+
+})
+
+// for keyboard click
 document.addEventListener('keydown', function (keys){
+    
+    function operatorsKeys(){
+        c = out.value["length"];
+
+        if (out.value[c-1] === "+"){
+            out.value = out.value.slice(0,-1);
+            out.value += keys.key;
+        }else if (out.value[c-1] === "-") {
+            out.value = out.value.slice(0,-1);
+            out.value += keys.key;
+        }else if (out.value[c-1] === "*") {
+            out.value = out.value.slice(0,-1);
+            out.value += keys.key;
+        }else if (out.value[c-1] === "/") {
+            out.value = out.value.slice(0,-1);
+            out.value += keys.key;
+        }else {
+            out.value += keys.key;
+
+        }
+    }
 
     switch(keys.key){
         case "1" :
@@ -55,16 +122,16 @@ document.addEventListener('keydown', function (keys){
             out.value += keys.key;
             break;
         case "+" :
-            out.value += keys.key;
+            operatorsKeys();
             break;      
         case "-" :
-            out.value += keys.key;
+            operatorsKeys();
             break;      
         case "*" :
-            out.value += keys.key;
+            operatorsKeys();
             break;      
         case "/" :
-            out.value += keys.key;
+            operatorsKeys();
             break;
         case "Enter" :
             try{
