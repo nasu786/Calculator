@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
+    width: 400px;
+    height: 50px;
+    background-color: rgb(140, 216, 133);
+}
+
+h2{
+    font-size: 23px;
+    padding: 10px 0 0 10px;
+    color:rgb(255, 255, 255)
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+
+main img{
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    
+    
+}
+
+main img:nth-of-type(1):hover{    
+    background-color: rgba(177, 255, 146, 0.664);
+    
+}
+main img:nth-of-type(2):hover{    
+    background-color: rgba(177, 255, 146, 0.664);
+    
+}
+main img:nth-of-type(3):hover{    
+    background-color: rgba(230, 17, 17, 0.664);
+    
+}
+
+section{
+    padding: 10px;
+    width: 400px;
+    height: 600px;
+    background-color: rgb(233, 245, 230);
+    display: grid;
+    gap: 3px;
+    grid-template-rows: repeat(7,1fr);
+    grid-template-columns: repeat(4,1fr);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 20px 5px rgba(0,0,0,0.06);
+}
+
+section div img {
+    padding: 5px;
+}
+
+.multiply{
+    padding: 1px;
+}
+
+#output-screen{
+    height: 140px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-weight: 500;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 60px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(176, 218, 170);
+    border-radius: 5px;
+    grid-area: 1 / 1 / 3 / 5;
+    text-align: end;
+    padding: 15px;
+    transform: translateY(5px);
+    
+}
+
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    background-color: rgb(140, 216, 133);
+    
+}
+
+div:active{
+    transform: scale(.97);
+    transition: all .2s ease-out;
+}
+div:hover{
+    background-color: rgb(102, 207, 92);
+    
+
+}
+.result{
+    grid-area: 1 / 1 / 3 / 5;
+    
+}
+.one{
+    grid-area: 4 / 1 / 5 / 2;
+}
+.two{
+    grid-area: 4 / 2 / 5 / 3;
+}
+.three{
+    grid-area: 4 / 3 / 5 / 4;
+}
+.four{
+    grid-area: 5 / 1 / 6 / 2;
+}
+.five{
+    grid-area: 5 / 2 / 6 / 3;
+}
+.six{
+    grid-area: 5 / 3 / 6 / 4;
+}
+.seven{
+    grid-area: 6 / 1 / 7 / 2;
+}
+.eight{
+    grid-area: 6 / 2 / 7 / 3;
+}
+.nine{
+    grid-area: 6 / 3 / 7 / 4;
+}
+.zero{
+    grid-area: 7 / 2 / 8 / 4;
+}
+.dot{
+    grid-area: 7 / 1 / 8 / 2;
+    font-size: 50px;
+}
+img{
+    width: 40px;
+    height: 40px;
+}
+.add{
+    grid-area: 4 / 4 / 5 / 5;
+}
+.sub{
+    grid-area: 5 / 4 / 6 / 5;
+}
+.multiply{
+    grid-area: 3 / 3 / 4 / 4;
+}
+.equal{
+    grid-area: 6 / 4 / 8 / 5;
+}
+.backspace{
+    grid-area: 3 / 4 / 4 / 5;
+}
+.division{
+    grid-area: 3 / 2 / 4 / 3;
+}

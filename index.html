@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Calculator</h2>
+        <main>
+            <img src="AllSvgs/minimize.svg" alt="Not available">
+            <img src="AllSvgs/maximize.svg" alt="Not available">
+            <img src="AllSvgs/close.svg" alt="Not available">    
+        </main>
+    </header>
+
+    <section>
+        <input type="text" id="output-screen">
+        <div onclick="display('1')" class="one">1</div>
+        <div onclick="display('2')" class="two">2</div>
+        <div onclick="display('3')" class="three">3</div>
+        <div onclick="display('4')" class="four">4</div>
+        <div onclick="display('5')" class="five">5</div>
+        <div onclick="display('6')" class="six">6</div>
+        <div onclick="display('7')" class="seven">7</div>
+        <div onclick="display('8')" class="eight">8</div>
+        <div onclick="display('9')" class="nine">9</div>
+        <div onclick="display('0')" class="zero">0</div>
+        <div onclick="display('.')"class="dot">.</div>
+        <div onclick="display('+')" class="add"><img src="AllSvgs/add.svg" alt="Not available"></div>
+        <div onclick="display('-')" class="sub"><img src="AllSvgs/sub.svg" alt="Not available"></div>
+        <div onclick="display('*')" class="multiply"><img src="AllSvgs/mul.svg" alt="Not available"></div>
+        <div onclick="display('/')" class="division"><img src="AllSvgs/div.svg" alt="Not available"></div>
+        <div onclick="del()" class="backspace"><img src="AllSvgs/backspace.png" alt="Not available"></div>
+        <div onclick="Calculate()" class="equal"><img src="AllSvgs/equal.svg" alt="Not available"></div>
+        <div onclick="Clear()" class="clear">C</div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
